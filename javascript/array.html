@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="add1()">ADD BEGINNING</button>
+    <button type="button" onclick="add2()">ADD AT THE END</button>
+    <button type="button" onclick="rem1()">REMOVE THE NAMES </button>
+    <button type="button" onclick="sort1()">SORTING </button>
+    <button type="button" onclick="nm()">FOR </button>
+    <button type="button" onclick="nm1()">FOR IN</button>
+    <button type="button" onclick="names()">FOR EACH </button>
+    <button type="button" onclick="nm2()">FOR OF</button>
+    <button type="button" onclick="nm3()">COMMA</button>
+    <button type="button" onclick="date()">DATE AND TIME</button>
+    <script>
+
+        function add1() {
+            var names = ["ranita", "haritha", "yamini", "harishmitha"];
+            names.unshift("pooja");
+            document.write(names);
+        }
+        function add2() {
+            var names = ["ranita", "haritha", "yamini", "harishmitha"];
+            names.push("pooja");
+            document.write(names);
+        }
+
+        function rem1() {
+            var names = ["ranita", "haritha", "yamini", "harishmitha"];
+            names.shift();
+            names.pop();
+            document.write(names);
+        }
+        function sort1() {
+            var names = ["ranita", "haritha", "yamini", "harishmitha"];
+            names.sort();
+            document.write(names);
+        }
+        function names() {
+            var names = ["ranita", "haritha", "yamini", "harishmitha"];
+            names.forEach(function (names) {
+                document.write(names);
+            })
+
+        }
+        function nm() {
+            var names = ["ranita", "haritha", "yamini", "harishmitha"];
+            for (let i = 0; i < names.length; i++) {
+                document.write(names[i]);
+            }
+        }
+        function nm1() {
+            var names = ["ranita", "haritha", "yamini", "harishmitha"];
+            for (var key in names) {
+                document.write(names[key]);
+            }
+        }
+        function nm2() {
+            var names = ["ranita", "haritha", "yamini", "harishmitha"];
+            for (var element of names) {
+                document.write(element);
+            }
+        }
+        function nm3() {
+            var names = ["ranita", "haritha", "yamini", "harishmitha"];
+            const str = String(names);
+            document.write(names);
+        }
+        function date() {
+
+            const date = new Date();
+
+
+            const n = date.toDateString();
+
+
+            const time = date.toLocaleTimeString();
+
+
+            document.write('Date: ' + n);
+
+
+            document.write('Time: ' + time);
+        }
+
+    </script>
+</body>
+
+</html>

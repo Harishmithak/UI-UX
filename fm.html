@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+
+            background-image: url("assests/back.jpg");
+            width: 300px;
+            border: 5px double black;
+            padding: 30px;
+            margin: 30px;
+        }
+
+        legend {
+            text-align: center;
+
+        }
+    </style>
+</head>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            REGISTRATION FORM
+        </legend>
+        <!--<p>REGISTRATION FORM</p>-->
+        <img src="assests\CGVAK.png" alt="CGVAK" height="100px" width="100px">
+
+        <div>
+
+            <form id="res" action="" method="post">
+
+                <label>FIRSTNAME</label>
+                <input type="text" name="uname" id="t1" /><br>
+                <br>
+                <label>LASTNAME</label>
+                <input type="text" name="lname" /><br>
+                <br>
+                <label>EMAIL</label>
+                <input type="email" name="email" /><br>
+                <br>
+                <label>USERNAME</label>
+                <input type="text" name="user" /><br>
+                <br>
+                <label>PASSWORD</label>
+                <input type="password" name="pwd" /><br>
+                <br>
+                <label>GENDER</label><br>
+                <input type="radio" id="gender" name="gender" value="Female">Female<br>
+                <input type="radio" id="gender" name="gender" value="Male">Male<br>
+                <br>
+                <label>ADDRESS</label><br>
+                <textarea></textarea><br>
+                <br>
+                <input type="date" name="dob">DATE OF BIRTH<br><br>
+                <br>
+                <label>MOBILE NUMBER</label>
+                <input type="tel" pattern="[0-9]{10}" name="phno"><br>
+                <br>
+                <br>
+                <label>TELEPHONE NUMBER</label>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" name="tno"><br>
+                <br>
+                <br>
+                <label>SELECT PROFESSION</label><br>
+                <select name="PROFESSION">
+                    <optgroup label="DEVELOPER">
+                        <option>FRONTEND</option>
+                        <option>BACKEND</option>
+                        <option>FULL STACK</option>
+                    </optgroup>
+                    <br>
+                    <br>
+                    <input type="submit" onclick="disp(res)" name="submit">
+
+            </form>
+
+    </fieldset>
+    <script>
+        function disp() {
+            const forms = document.getElementById("res");
+            const name = forms.elements["uname"].value;
+            const lastname = forms.elements["lname"].value;
+            const email = forms.elements["email"].value;
+            const gender = forms.elements["gender"].value;
+            const password = forms.elements["pwd"].value;
+            const dob = forms.elements["dob"].value;
+            const mobileno = forms.elements["phno"].value;
+            const telephoneno = forms.elements["tno"].value;
+            document.write("NAME:" + (name+"<br>"));
+
+            document.write("LASTNAME:" + (lastname+"<br>"));
+
+            document.write("email:" + (email+"<br>"));
+
+            document.write("GENDER:" + (gender+"<br>"));
+
+            document.write("PASSWORD:" + (password+"<br>"));
+
+            document.write("DOB:" + (dob+"<br>"));
+
+            document.write("MOBILENO:" + (mobileno+"<br>"));
+
+            document.write("TELEPHONE:" + (telephoneno+"<br>"));
+            if (name == '') {
+                window.alert('Please enter your name');
+            }
+            else if (!letters.test(name)) {
+                window.alert('Name field required only alphabet characters');
+            }
+            else if (email == '') {
+               window.alert('Please enter your user email id');
+            }
+            else if (!filter.test(email)) {
+                window.alert('Invalid email');
+            }
+
+
+            else {
+                alert('Thank You for Registration & You are Redirecting to Website');
+                // Redirecting to other page or webste code. 
+                window.location = "https://tutorial.eyehunts.com//";
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+
+    </div>
+
+
+</body>
+
+</html>

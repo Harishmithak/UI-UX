@@ -7,86 +7,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>styles</title>
     <style>
-         div {
+        div {
 
-            background-image:url("assests/back.jpg");
+            background-image: url("assests/back.jpg");
             width: 300px;
             border: 5px double black;
             padding: 30px;
             margin: 30px;
         }
-    legend{
-        text-align: center;
 
-    }
-        
+        legend {
+            text-align: center;
+
+        }
     </style>
 </head>
 
 <body>
+
     <fieldset>
         <legend>
-            LOGIN FORM
+            REGISTRATION FORM
         </legend>
-    <!--<p>REGISTRATION FORM</p>-->
-    <img src="assests\CGVAK.png" alt="CGVAK" height="100px" width="100px">
-  
-    <div>
-    <form>
-        <label>FIRSTNAME</label>
-        <input type="text" required /><br>
-        <br>
-        <label>LASTNAME</label>
-        <input type="text" required /><br>    
-        <br>
-        <label>EMAIL</label>
-        <input type="email" required /><br>
-        <br>
-        <label>USERNAME</label>
-        <input type="text" required /><br>
-        <br>
-        <label>PASSWORD</label>
-        <input type="password" required /><br>
-        <br>
-        <label>GENDER</label><br>
-        <input type="radio" id="gender" name="gender" value="Female">Female<br>
-        <input type="radio" id="gender" name="gender" value="Male">Male<br>
-        <br>
-        <label>ADDRESS</label><br>
-        <textarea></textarea><br>
-        <br>
-        <input type="date">DATE OF BIRTH<br><br>
-        <br>
-        <label>MOBILE NUMBER</label>
-        <input type="tel" pattern="[0-9]{10}" required><br>
-        <br>
-        <br>
-        <label>TELEPHONE NUMBER</label>
-        <input type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" required><br>
-        <br>
-        <br>
-        <label>SELECT PROFESSION</label><br>
-        <select name="PROFESSION">
-            <optgroup label="DEVELOPER">
-                <option>FRONTEND</option>
-                <option>BACKEND</option>
-                <option>FULL STACK</option>
-            </optgroup>
-            <br>
-            <br>
-            <input type="submit" value="SUBMIT" >
-           
-        </fieldset>
+        <!--<p>REGISTRATION FORM</p>-->
+        <img src="assests\CGVAK.png" alt="CGVAK" height="100px" width="100px">
 
+        <div>
 
+            <form>
 
+                <label>FIRSTNAME</label>
+                <input type="text" id="t1" /><br>
+                <br>
+                <label>LASTNAME</label>
+                <input type="text" /><br>
+                <br>
+                <label>EMAIL</label>
+                <input type="email" id="t2" /><br>
+                <br>
+                <label>USERNAME</label>
+                <input type="text" id="t3" /><br>
+                <br>
+                <label>PASSWORD</label>
+                <input type="password" id="t4" /><br>
+                <br>
+                <label>GENDER</label><br>
+                <input type="radio" id="gender" name="gender" value="Female">Female<br>
+                <input type="radio" id="gender" name="gender" value="Male">Male<br>
+                <br>
+                <label>ADDRESS</label><br>
+                <textarea></textarea><br>
+                <br>
+                <input type="date">DATE OF BIRTH<br><br>
+                <br>
+                <label>MOBILE NUMBER</label>
+                <input type="tel" pattern="[0-9]{10}"><br>
+                <br>
+                <br>
+                <label>TELEPHONE NUMBER</label>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"><br>
+                <br>
+                <br>
+                <label>SELECT PROFESSION</label><br>
+                <select name="PROFESSION">
+                    <optgroup label="DEVELOPER">
+                        <option>FRONTEND</option>
+                        <option>BACKEND</option>
+                        <option>FULL STACK</option>
+                    </optgroup>
+                    <br>
+                    <br>
+                    <input type="submit" name="submit" value="SUBMIT"> 
+                 
 
-
-
-
+    </fieldset>
 
     </form>
-</div>
+
+    </div>
+
+
 </body>
 
 </html>
