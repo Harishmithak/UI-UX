@@ -1,170 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        div {
 
-            background-image: url("assests/back.jpg");
-            width: 300px;
-            border: 5px double black;
-            padding: 30px;
-            margin: 30px;
-        }
-
-        legend {
-            text-align: center;
-
-        }
-    </style>
 </head>
+
 <body>
-    <!-- <fieldset>
-        <legend>
-            REGISTRATION FORM
-        </legend>
-        <p>REGISTRATION FORM</p>-->
-        <!-- <img src="assests\CGVAK.png" alt="CGVAK" height="100px" width="100px">
 
-        <div>
+    <form name="res" method="post" onsubmit="return display()">
+        Name: <input type="text" name="uname"><br />
 
-            <form id="res" action="" method="post"> -->
-
-                <!--<label>FIRSTNAME</label>
-                <input type="text" name="uname" id="t1" /><br>
-                <br>
-                <label>LASTNAME</label>
-                <input type="text" name="lname" /><br>
-                <br>
-                <label>AGE</label>
-                <input type="text" name="AGE"  /><br>
-                <br>
-                <label>EMAIL</label>
-                <input type="email" name="email" /><br>
-                <br>
-                <label>USERNAME</label>
-                <input type="text" name="user" /><br>
-                <br>
-                <label>PASSWORD</label>
-                <input type="password" name="pwd" /><br>
-                <br>
-                <label>GENDER</label><br>
-                <input type="radio" id="gender" name="gender" value="Female">Female<br>
-                <input type="radio" id="gender" name="gender" value="Male">Male<br>
-                <br>
-                <label>ADDRESS</label><br>
-                <textarea></textarea><br>
-                <br>
-                <input type="date" name="dob">DATE OF BIRTH<br><br>
-                <br>
-                <label>MOBILE NUMBER</label>
-                <input type="tel" pattern="[0-9]{10}" name="phno"><br>
-                <br>
-                <br>
-                <label>TELEPHONE NUMBER</label>
-                <input type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" name="tno"><br>
-                <br>
-                <br>
-                <label>SELECT PROFESSION</label><br>
-                <select name="PROFESSION">
-                    <optgroup label="DEVELOPER">
-                        <option>FRONTEND</option>
-                        <option>BACKEND</option>
-                        <option>FULL STACK</option>
-                    </optgroup>
-                    <br>
-                    <br>
-                    <input type="submit" onclick="disp(res)" name="submit">
-
-            </form>
-
-    </fieldset> -->
-    <form name="res" method="post" action="abc.jsp" onsubmit="return disp()" >  
-        Name: <input type="text" name="uname"><br/>  
-      age: <input type="text" name="AGE"  /><br>
-       email: <input type="email" name="email" /><br>
-      dob: <input type="date" name="dob">DATE OF BIRTH<br><br>
-        Password: <input type="password" name="pwd"><br/> 
-       gender: <input type="radio" id="gender" name="gender" value="Female">Female<br>
-                <input type="radio" id="gender" name="gender" value="Male">Male<br> 
-               mobileno: <input type="tel" pattern="[0-9]{10}" name="phno"><br>
-               telphno:<input type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" name="tno"><br>
-        <input type="submit" value="register">  
+        email: <input type="email" name="email"><br>
+        dob: <input type="date" name="age">DATE OF BIRTH<br><br>
+        Password: <input type="password" name="pwd"><br>
+        gender: <input type="radio" id="gender" name="gender" value="Female">Female<br>
+        <input type="radio" id="gender" name="gender" value="Male">Male<br>
+        mobileno: <input type="tel" pattern="[0-9]{10}" name="phno"><br>
+        telphno:<input type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" name="tno"><br>
+        <input type="submit" value="submit">
+    </form>
     <script>
-        function disp() {
-            //const forms = document.getElementById("res");
+        function display() {
             var name = document.res.uname.value;
-            var age =  document.res.AGE.value;
-            var  lastname =  document.res.lname.value;
             var email = document.res.email.value;
             var gender = document.res.gender.value;
-            var password =  document.res.pwd.value;
-            var dob =  document.res.dob.value;
-            var mobileno =  document.res.phno.value;
+            var password = document.res.pwd.value;
+            var age = document.res.age.value;
+            var mobileno = document.res.phno.value;
             var telephoneno = document.res.tno.value;
-            //document.write("NAME:" + (name+"<br>"));
-
-           // document.write("LASTNAME:" + (lastname+"<br>"));
-            //document.write("AGE:" + (age+"<br>"));
-
-           // document.write("email:" + (email+"<br>"));
-
-            //document.write("GENDER:" + (gender+"<br>"));
-
-           // document.write("PASSWORD:" + (password+"<br>"));
-
-           // document.write("DOB:" + (dob+"<br>"));
-
-           // document.write("MOBILENO:" + (mobileno+"<br>"));
-
-           // document.write("TELEPHONE:" + (telephoneno+"<br>"));
             if (name == '') {
                 alert('Please enter your name');
-                return false;
+
             }
             else if (!letters.test(name)) {
-              alert('Name field required only alphabet characters');
-              return false;
+                alert('Name field required only alphabet characters');
+
             }
             else if (email == '') {
-              alert('Please enter your user email id');
-              return false;
+                alert('Please enter your user email id');
+
             }
             else if (!filter.test(email)) {
-               alert('Invalid email');
-               return false;
+                alert('Invalid email');
+
             }
-            else if (age>=18)
-            {
-               alert(name+"is eligible to vote");
-               return false;
-            }
-            else if (age<18)
-            {
-                alert(name+"is not eligible to vote");
-                return false;
-            }
-            
 
             else {
-                alert('Thank You for Registration & You are Redirecting to Website');
-                // Redirecting to other page or webste code. 
-                window.location = "https://tutorial.eyehunts.com//";
+                alert("Thank You for Registration & You are Redirecting to Website");
+
+                document.write("THE FIRST NAME OF THE PERSON IS : " + name + "<br>");
+                var dob = new Date(age);
+                var dif = Date.now() - dob.getTime();
+                var daydiff = (dif / 31536000000).toFixed(0);
+                document.write(daydiff + "<br>");
+
+
+                if (daydiff > 18) {
+                    document.write(name + "  " + " IS ELIGIBLE TO VOTE THIS YEAR ");
+                }
+                else {
+                    document.write(name + " " + " IS NOT ELIGIBLE TO VOTE THIS YEAR ")
+                }
+
+
             }
         }
-
-
-
 
 
 
     </script>
 
-
-    </div>
-
 </body>
+
 </html>
