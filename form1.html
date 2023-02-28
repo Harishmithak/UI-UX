@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="res" method="post" >
+        userName: <input type="text" name="uname"><br />
+        Password: <input type="password" name="pwd"><br />
+        confirmPassword: <input type="password" name="cpwd"><br />
+        <button type="button" onclick="disp()"> SUBMIT </button>
+        </form>
+        <script>
+            function disp(){
+           
+
+            var name = document.res.uname.value;
+            var pwd = document.res.pwd.value;
+            var cpwd =document.res.cpwd.value;
+            var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+            var letters = /^[A-Za-z]+$/;
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (name == "") {
+                alert("ENTER NAME WITHOUT BLANK SPACES ! ");
+            }
+            else if (!letters.test(name)) {
+                alert('NAME FIELD REQUIRED ONLY ALPHABET CHARACTERS ! ');
+            }
+            else if (pwd == "") {
+
+                alert("ENTER YOUR PASSWORD ! ");
+
+            }
+            else if (cpwd == "") {
+
+                alert("CONFIRM YOUR PASSWORD ! ");
+
+            }
+            else if (!pwd_expression.test(pwd)) {
+                alert('UPPER CASE, LOWER CASE, SPECIAL CHARACTER AND NUMERIC LETTER ARE REQUIRED IN PASSWORD FILED');
+            }
+            else if (pwd != cpwd) {
+                alert('PASSWORD AND CONFIRM PASSWORD VALUE IS NOT SAME ! ');
+            }
+            else if (cpwd.length < 8) {
+                alert('PASSWORD MINIMUM LENGTH IS 8 !');
+            }
+            else if (cpwd.length > 15) {
+                alert('PASSWORD MAXIMUM LENGTH IS 15 !');
+            }
+            else {
+
+                alert("thanks for registering");
+                window.location="http://127.0.0.1:5500/LOG1.HTML";
+            }
+        }
+        </script>
+</body>
+
+</html>
