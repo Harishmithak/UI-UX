@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person1
+        {
+            constructor(name, age, gender, address) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+                this.address = address;
+            }
+                disp()
+                {
+                   
+                }
+
+         }
+         class Employee extends person1 {
+                constructor(name, age, gender, address, employeecode, department, designation, salary) {
+                    super(name, age, gender, address);
+                    this.emp_code = employeecode;
+                    this.dept = department;
+                    this.des= designation;
+                    this.salary = salary;
+
+
+                }
+
+                disp() {
+                    document.write(emp.name + " " + emp.age + " " + emp.gender + " " + emp.address + " " + emp.emp_code + " " + emp.dept + " " + emp.des + " " + emp.salary);
+                }
+
+
+            }
+            var emp = new Employee("harishmitha", 21, "female", "gdr colony",201091, "BCA", "trainee", 20000);
+            emp.disp();
+
+    
+    </script>
+</body>
+</html>
